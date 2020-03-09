@@ -1,0 +1,9 @@
+version: "3"
+services:
+  acme.sh:
+    image: jaydouble/acme.sh:latest
+    restart: always
+    volumes:
+      - ./out:/acme.sh
+      - ./cli-config.json:/root/.config/transip-api/cli-config.json
+    command: daemon
