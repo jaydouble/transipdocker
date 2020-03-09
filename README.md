@@ -20,3 +20,12 @@ docker run --rm  -it  \
   --issue -d example.net -d example.com  -d '*.example.net' -d '*.example.net' --dns dns_transip --dnssleep 600
 ```
 
+or start with:
+``` 
+docker-composer up -d
+```
+
+and then run acme.sh commands with:
+```
+docker exec acmesh_acme.sh_1 --issue example.com --dns trans_ip
+```
