@@ -17,5 +17,7 @@ and then run acme.sh commands like:
 docker exec -it transipdocker_acme.sh_1 tipctl setup
 ```
 ```
-docker exec -it transipdocker_acme.sh_1 --issue -d example.com -d *.example.com --dns dns_trans_ip --dnssleep 300
+docker exec -it transipdocker_acme.sh_1 \
+  --issue -d example.com -d *.example.com \
+  --dns dns_trans_ip --dnssleep 300
 ```
