@@ -6,4 +6,5 @@ services:
     volumes:
       - ./out:/acme.sh
       - ./cli-config.json:/root/.config/transip-api/cli-config.json
+      - ./certs:/etc/ssl/private
     command: daemon
