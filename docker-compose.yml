@@ -5,6 +5,6 @@ services:
     restart: always
     volumes:
       - ./out:/acme.sh
-      - ./cli-config.json:/root/.config/transip-api/cli-config.json
+      - ./cli-config.json:/root/.config/transip-api/cli-config.json:ro
       - ./certs:/etc/ssl/private
     command: daemon
