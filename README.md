@@ -5,6 +5,7 @@ start docker, to get any idea how: [docker docs](https://docs.docker.com/install
 clone this repo:
 ```
 git clone https://github.com/jaydouble/transipdocker
+cd transipdocker
 ```
 
 then start with:
@@ -20,7 +21,7 @@ docker exec -it transipdocker_acme.sh_1 tipctl setup
 ### issue a certificate
 ```
 docker exec transipdocker_acme.sh_1 \
-  --issue -d example.com -d *.example.com \
+  --issue -d example.com -d '*.example.com' \
   --dns dns_trans_ip --dnssleep 300
 ```
 ### install certificate into certs folder:
