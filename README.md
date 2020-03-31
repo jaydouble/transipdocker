@@ -22,7 +22,7 @@ docker exec -it transipdocker_acme.sh_1 tipctl setup
 ```
 docker exec transipdocker_acme.sh_1 \
   --issue -d example.com -d '*.example.com' \
-  --dns dns_trans_ip --dnssleep 300
+  --dns dns_transip --dnssleep 300
 ```
 ### install certificate into certs folder:
 ```
