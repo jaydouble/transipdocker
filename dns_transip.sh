@@ -14,8 +14,8 @@ dns_transip_add() {
 		_err "invalid domain"
 		return 1
 	fi
-	_debug "$api domain:dns:adddnsentry $domain \"$host\" 3600 \"$txtvalue\""
-	$api -- domain:dns:adddnsentry $domain "$host" 3600 TXT "$txtvalue"
+	_debug "$api domain:dns:adddnsentry -- $domain \"$host\" 3600 \"$txtvalue\""
+	$api -- domain:dns:adddnsentry -- $domain "$host" 3600 TXT "$txtvalue"
 }
 
 # Usage: fulldomain txtvalue
@@ -32,7 +32,7 @@ dns_transip_rm() {
                 return 1
         fi
 
-        $api -- domain:dns:removednsentry $domain "$host" 3600 TXT "$txtvalue"
+        $api -- domain:dns:removednsentry -- $domain "$host" 3600 TXT "$txtvalue"
 }
 
 
